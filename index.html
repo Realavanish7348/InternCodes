@@ -1,0 +1,213 @@
+<!-- <!DOCTYPE html> tells browser this is HTML5 -->
+<!doctype html>
+<!-- html is the root Element  or Boilerplate  for  document structure-->
+<html lang="en">
+  <!-- head is the metadata which is not visible  -->
+  <head>
+    <!-- meta it's like webpage information provider, it is always written inside the head tag  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="html css javasript react nodejs express mongoose"
+    />
+    <!-- connection style or css file  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- title will be like tab name  -->
+    <title>Document</title>
+  </head>
+  <!-- body tag contains all visible content of web app -->
+  <body>
+    <header>
+      <nav>
+        <h1>Navigation Panel</h1>
+        <!--  ul tag is for unorder list used for  -->
+        <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>JS</li>
+          <li>React</li>
+          <li>Node</li>
+        </ul>
+      </nav>
+      <aside>
+        <h1>This Aside tage is for Sidebar</h1>
+        <!-- ol is for orderlist , it is used for  -->
+        <ol type="i">
+          <li>step1</li>
+          <li>step2</li>
+          <li>step3</li>
+          <li>step4</li>
+          <li>step5</li>
+        </ol>
+      </aside>
+    </header>
+
+    <main>
+      <!-- Form tag is used for login/signup etc forms -->
+      <form action="">
+        <h1>Inside Form</h1>
+        <br />
+        <label for="" aria-placeholder="full name">Name:</label>
+        <br />
+        <input type="text" />
+
+        <br />
+
+        <label for="" aria-placeholder="email">Email:</label>
+        <br />
+        <input type="email" />
+
+        <!--  all types input  -->
+        <!-- <br />
+        <label for="">password</label>
+        <input type="password" />
+        <br />
+        <label for="">number</label>
+        <input type="number" />
+        <br />
+        <label for="">date</label>
+        <input type="date" />
+        <br />
+        <label for="">checkbox</label>
+        <input type="checkbox" />
+        <br />
+        <label for="">radio</label>
+        <input type="radio" />
+        <br />
+        <label for="">file</label>
+        <input type="file" />
+        <br /> -->
+        <!--  button to submit form  -->
+        <button>Submit Button</button>
+        <p>
+          When click on form submit button
+          <strong>Bubbling and Capturing</strong> phase happens.<br />
+          (EventDelegation will be like it did the job of many eventlisteners
+          alone.)
+        </p>
+      </form>
+
+      <section>
+        <form>
+          <fieldset>
+            <legend>User Personal Information</legend>
+            <label for="name">Enter your full name:</label>
+            <input type="text" id="name" name="name" required />
+            <br />
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required />
+            <br />
+            <label for="password">Enter your password:</label>
+            <input type="password" id="password" name="pass" required />
+            <br />
+            <label for="confirmPassword">Confirm your password:</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPass"
+              required
+            />
+            <br />
+            <label>Enter your gender:</label>
+            <div class="gender-group">
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                id="male"
+                required
+              />
+              <label for="male">Male</label>
+              <input type="radio" name="gender" value="female" id="female" />
+              <label for="female">Female</label>
+              <input
+                type="radio"
+                name="gender"
+                value="others"
+                id="others"
+                checked
+              />
+              <label for="others">Others</label>
+            </div>
+            <br />
+            <label for="dob">Enter your Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+            <label for="address">Enter your Address:</label>
+            <textarea id="address" name="address" required></textarea>
+            <input type="submit" value="Submit" />
+          </fieldset>
+        </form>
+      </section>
+      <!-- Section 1 -->
+      <section>
+        <article>
+          <h1>Use heading tag only one per page with follow up hierarchy</h1>
+          <!--  a tag is the anchor tag which help us to redirect document using links and connecting pages  -->
+          <a href="https://www.google.com/" target="_blank">Google</a>
+          <!--  target attribute is used to open page in another tab not in same tab -->
+          <p>
+            this is paragraph
+            <strong>this make text bold</strong>
+            <em>this for to make text italic</em>
+            <!--  if you want to break any line use br tag -->
+            <br />
+          </p>
+        </article>
+
+        <h2>Best practice for SEO</h2>
+      </section>
+      <!-- Section 2 -->
+      <section>
+        <article>
+          <h1>Image preview style="width: 80%; height: 80%" on Body</h1>
+          <img
+            src="./Images//img1.jpg"
+            alt="Nature Beauty Image"
+            style="width: 80%; height: 80%"
+          />
+          <iframe src="" frameborder="0"></iframe>
+          <video src=""></video>
+        </article>
+        <!-- Table practice  -->
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Avanish</td>
+            <td>20+</td>
+            <td>Male</td>
+            <td>Developer</td>
+          </tr>
+          <tr>
+            <td>Avanish</td>
+            <td>20+</td>
+            <td>Male</td>
+            <td>Developer</td>
+          </tr>
+          <tr>
+            <td>Avanish</td>
+            <td>20+</td>
+            <td>Male</td>
+            <td>Developer</td>
+          </tr>
+          <tr>
+            <td>Avanish</td>
+            <td>20+</td>
+            <td>Male</td>
+            <td>Developer</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <!--  adding my script file  -->
+    <script src="script.js"></script>
+  </body>
+</html>
