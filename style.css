@@ -1,18 +1,222 @@
-html {
+:root {
+  /* background layers */
+  --bg-primary: #0b0f14; /* main page */
+  --bg-secondary: #111827; /* sections / navbar */
+  --bg-elevated: #1f2933; /* cards / modals */
+  --bg-hover: #243041; /* hover surface */
+
+  /* text hierarchy */
+  --text-primary: #e5e7eb; /* main text */
+  --text-secondary: #9ca3af; /* description */
+  --text-muted: #6b7280; /* placeholder */
+
+  /* accent (interactive color) */
+  --accent-primary: #3b82f6; /* buttons / links */
+  --accent-hover: #2563eb;
+
+  /* border + divider */
+  --border-subtle: #1f2937;
+  --border-strong: #374151;
+
+  /* feedback states */
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  /* shadow for modern depth */
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+* {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  width: 100%;
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: larger;
   font-weight: 600;
-  background-color: black;
-  color: white;
+  min-height: 100vh;
+  /* background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary)); */
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(59, 130, 246, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+
+  color: var(--text-primary);
+  position: relative;
+}
+
+/*  Navbar  */
+
+.nav-container {
   display: flex;
-  gap: 10rem;
-  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 8px 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 17px;
+  border-radius: 16px;
+  border-bottom: 2px solid var(--border-strong);
+  background: var(--bg-secondary);
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.nav-menu:hover {
+  transform: translateY(-2px);
+}
+.nav-item {
+  font-size: clamp(1.7rem, 3vw, 3.5rem);
+  transition: all 0.2s ease-in-out;
+}
+.nav-item:hover {
+  transform: scale(1.2);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-primary);
+}
+
+li {
+  margin: 8px 0;
+}
+
+/* Hero Page */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(59, 130, 246, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+}
+
+/* content wrapper */
+.hero-content {
+  max-width: 698px;
+  margin-top: 6rem;
+}
+
+/* small heading */
+.hero-eyebrow {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* main heading */
+.hero-title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+/* accent word */
+.hero-title span {
+  color: var(--accent-primary);
+}
+
+/* description */
+.hero-description {
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* buttons */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* button base */
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* primary button */
+.btn-primary {
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--accent-hover);
+}
+
+/* secondary button */
+.btn-secondary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* Css for Page Style (common for all) */
+
+.page {
+  min-height: 100vh;
+  padding: 30px 20px;
+  border-top: 1px solid var(--border-subtle);
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(59, 130, 246, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
 }
